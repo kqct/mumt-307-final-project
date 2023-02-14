@@ -1,0 +1,7 @@
+* MUMT 307 Semester Project
+** Implementation of Basic Wavetable/Delay Line/etc. in Rust? (too software focused?)
+** something to do with AM/FM synthesis? (will we cover this?)
+** a granular synthesizer in Max/C (scope?)
+** avoiding MATLAB (this isn't a project)
+** waveform synthesis? I saw a video on the NES sound chip (i know we said we're skipping this)
+** reimplementing types of Fourier transforms (neat learning tool, weird project?)
