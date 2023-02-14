@@ -1,7 +1,16 @@
 * MUMT 307 Semester Project
-** Implementation of Basic Wavetable/Delay Line/etc. in Rust? (too software focused?)
-** something to do with AM/FM synthesis? (will we cover this?)
-** a granular synthesizer in Max/C (scope?)
-** avoiding MATLAB (this isn't a project)
-** waveform synthesis? I saw a video on the NES sound chip (i know we said we're skipping this)
-** reimplementing types of Fourier transforms (neat learning tool, weird project?)
+** Project idea: Subtractive Synthesizer
+- Written from scratch in C++/Rust/Zig
+- Likely using BLIT as basis for synthesis
+** Additive vs. Subtractive Synthesis
+- Additive synthesis is like what we've done in MATLAB
+  - Take a simple signal and filter it to add stuff
+- Subtractive synthesis is like what we've been doing in Max
+  - Take a harmonically rich model, filter it to remove stuff
+- Both models arrive at the desired waveform, through different directions
+** Overall Roadmap
+- Reference implementation in MATLAB
+  - Use class notes as reference
+- Own implementation in chosen language
+  - Use STK impl as reference
+- Bonus: Use JUCE/similar to create working VST
