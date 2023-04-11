@@ -11,16 +11,12 @@
   - and the math behind them!
 - Aiming fairly realistic
 
----
-
 ## Components
 
 - LP-BLIT
 - Sawtooth wave
 - Square wave
 - Triangle wave
-
----
 
 ## Product
 
@@ -31,8 +27,6 @@
 - A much better understanding of synthesis concepts
   - Not quite something I can show on screen
 
----
-
 ## Challenges
 
 - Comprehension isn't easy!
@@ -41,16 +35,15 @@
 - Implementation issues
   - There are a good couple of C++ implementations missing compared to MATLAB
   - Had a couple issues with the leaky integrator not behaving as expected leading to a lack of prototypes
-
----
+- Deciding a C++ API
+  - Disliked STK implementation
+  - MATLAB organization not a good fit for OO language
 
 ## What's left?
 
 - Expansion of original idea (sine waves?)
 - Incorporation into larger product
   - Current library is very theoretical
-
----
 
 ## What did I learn?
 
@@ -59,4 +52,26 @@
 - MATLAB is actually kind of fun!
   - I originally shied away from prototyping in the language, but it was really helpful
 - Writing idiomatic code can help a lot
+
+# Examples
+
+## MATLAB:
+
+![blit impl](img/blit.m.png)
+
+---
+
+```matlab
+plot(blit(0:4*(44100/440), 44100, 440, 0.4, 4, 8))
+```
+
+![blit plot](img/blit.plt.png)
+
+## C++:
+
+![blit header](img/blit.hpp.png)
+
+---
+
+![blit impl](img/blit.cpp.png)
 
