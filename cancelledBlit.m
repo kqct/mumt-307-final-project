@@ -1,17 +1,4 @@
-% blit gets the next tick of a Hammerich-based BLIT.
-% x is the sample number
-% sampleRate is self explanatory
-% so is frequency
-% filterSlope controls how fast the filter falls off, larger values falling
-% slower (0.05 is fast, 1.0 is slow)
-% harmonicsCount defines the cutoff frequency – it's the number of
-% harmonics we want to allow in the final signal
-% overlapCount is a measure of resolution, of sorts - how many pulse
-% functions do we wantto calculate at once? a higher number gives greater
-% accuracy at the expense of computational power
-% windowType defines the window type of each individual pulse. currently
-% locked to Hamming
-function y = blit(x, sampleRate, frequency, filterSlope, harmonicsCount, overlapCount) % windowType
+function y = cancelledBlit(x, i, sampleRate, frequency, filterSlope, harmonicsCount, overlapCount) % windowType
     % find the number of samples in the inter-pulse distance
     s = sampleRate / frequency;
     t = overlapCount * s;
@@ -33,3 +20,7 @@ function y = blit(x, sampleRate, frequency, filterSlope, harmonicsCount, overlap
     largest = max(y);
     y = y .* 1/largest;
 end
+%     orig = blit(x, sampleRate, frequency, filterSlope, harmonicsCount, overlapCount);
+%     new = blit(x, sampleRate, frequency * i, filterSlope, harmonicsCount, overlapCount) ./ i;
+%     y = orig - new;
+% end
