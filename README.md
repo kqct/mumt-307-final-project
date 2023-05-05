@@ -1,6 +1,8 @@
-% MUMT 307 Final Project
-% Katie Lin (she/her)
-% 5 May 2023
+**MUMT 307 Final Project**
+
+_Katie Lin (she/her)_
+
+_5 May 2023_
 
 # Description
 
